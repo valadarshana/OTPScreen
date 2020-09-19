@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var btnsub: UIButton!
-    var count=0
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         txtopt.layer.borderWidth = 1
@@ -23,15 +23,13 @@ class ViewController: UIViewController {
         txtopt.layer.borderColor = UIColor.white.cgColor
         txtopt.textColor = UIColor.white
         txtopt.textAlignment = .center
-        
         btnsub.layer.borderWidth = 1
         btnsub.layer.cornerRadius = 10
         btnsub.layer.borderColor = UIColor.white.cgColor
         
-        
     }
+    
     @IBAction func text_change(_ sender: Any){
-        count=count+1
         if txtopt.text?.count == 4
         {
             txtopt.resignFirstResponder()
@@ -47,8 +45,6 @@ class ViewController: UIViewController {
             txtopt.textColor=UIColor.red
         }
     }
-    
-    
     
 }
 
