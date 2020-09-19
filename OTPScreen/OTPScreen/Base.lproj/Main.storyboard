@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-nb-CMP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter otp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wn-m6-QVw">
                                 <rect key="frame" x="25" y="94" width="364" height="36"/>
@@ -50,33 +50,61 @@
                                     <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G71-Og-hh6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc7-CD-iQu">
+                                <rect key="frame" x="50" y="380" width="314" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Wn-ynV">
+                                <rect key="frame" x="25" y="430" width="364" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="N6P-uS-Pad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="RESEND">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Resnd_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jn1-h4-nFP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lxX-nb-CMP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Bu-LA-8YM"/>
                             <constraint firstItem="4Qs-Dg-5Bf" firstAttribute="top" secondItem="pTO-Yq-Bpm" secondAttribute="bottom" constant="50" id="3ku-hX-Y6a"/>
                             <constraint firstItem="pTO-Yq-Bpm" firstAttribute="top" secondItem="7Wn-m6-QVw" secondAttribute="bottom" constant="50" id="7Wx-is-wcm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vV3-Wn-ynV" secondAttribute="trailing" constant="25" id="BSr-Gn-dqX"/>
                             <constraint firstItem="lxX-nb-CMP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EEd-r8-eeS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lxX-nb-CMP" secondAttribute="bottom" id="KOe-gp-Luc"/>
+                            <constraint firstItem="vV3-Wn-ynV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="EkE-6l-84w"/>
+                            <constraint firstItem="vV3-Wn-ynV" firstAttribute="top" secondItem="Rc7-CD-iQu" secondAttribute="bottom" constant="50" id="I7X-EL-BhI"/>
                             <constraint firstItem="7Wn-m6-QVw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="KPz-pF-2Qo"/>
                             <constraint firstItem="4Qs-Dg-5Bf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Wnw-z3-LXh"/>
+                            <constraint firstAttribute="bottom" secondItem="lxX-nb-CMP" secondAttribute="bottom" id="XwW-kC-HQ6"/>
                             <constraint firstItem="pTO-Yq-Bpm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="ZeN-Q2-7EX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Wn-m6-QVw" secondAttribute="trailing" constant="25" id="aj6-BR-dDr"/>
                             <constraint firstItem="7Wn-m6-QVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="caz-KH-kOg"/>
-                            <constraint firstItem="lxX-nb-CMP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e3D-e5-qJi"/>
+                            <constraint firstItem="Rc7-CD-iQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="fAh-Ob-jue"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Qs-Dg-5Bf" secondAttribute="trailing" constant="25" id="g4w-tR-gF1"/>
+                            <constraint firstItem="Rc7-CD-iQu" firstAttribute="top" secondItem="4Qs-Dg-5Bf" secondAttribute="bottom" constant="50" id="hBq-hS-8NE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lxX-nb-CMP" secondAttribute="trailing" id="j1y-EN-7Tw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pTO-Yq-Bpm" secondAttribute="trailing" constant="25" id="o04-s9-YjY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rc7-CD-iQu" secondAttribute="trailing" constant="50" id="pqN-cv-hQB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnresend" destination="vV3-Wn-ynV" id="fDO-oP-7ni"/>
                         <outlet property="btnsub" destination="4Qs-Dg-5Bf" id="gbc-53-K3c"/>
+                        <outlet property="lbl_timer" destination="Rc7-CD-iQu" id="UKZ-ac-EBS"/>
                         <outlet property="txtopt" destination="pTO-Yq-Bpm" id="RbA-uy-075"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="54"/>
+            <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
         </scene>
     </scenes>
     <resources>
