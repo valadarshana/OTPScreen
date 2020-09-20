@@ -36,16 +36,25 @@ class ViewController: UIViewController {
         btnresend.layer.cornerRadius=10
         btnresend.layer.borderWidth=1
         btnresend.layer.borderColor=UIColor.white.cgColor
-        
+        //Start Timer
         timer_init()
-       // btnresend.addTarget(self, action: #selector(resendClick), for: .touchUpInside)
+        //Button Click By coding
+        btnresend.addTarget(self, action: #selector(resendClick), for: .touchUpInside)
         
     }
+    
+    //Timer Init Function
     func timer_init(){
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(update) , userInfo: nil , repeats: true)
     }
     
+    //Resend Click
+    @objc func resendClick(){
+        btnresend.isHidden=true
+        timer_init()
+    }
   
+    //Update Timer label Value
    @objc func update(){
         if count>0 {
             count-=1
@@ -60,6 +69,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Text Change Action
     @IBAction func text_change(_ sender: Any){
         if txtopt.text?.count == 4
         {
@@ -67,6 +77,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Submit Button Click Action
     @IBAction func btn_click(_ sender: Any) {
         
         if txtopt.text == "1604"
@@ -80,10 +91,10 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func Resnd_click(_ sender: Any) {
-        btnresend.isHidden=true
-         timer_init()
-    }
+//    @IBAction func Resnd_click(_ sender: Any) {
+//        btnresend.isHidden=true
+//         timer_init()
+//    }
     
     
 }
